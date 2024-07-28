@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <h1>master Branch Application</h1>
-      <h1> Dev branch Application</h1>
+      <h1> Devv branch Application</h1>
     </div>
   );
 }
