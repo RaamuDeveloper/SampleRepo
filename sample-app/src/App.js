@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import CrudFun from "./CrudFun";
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,6 @@ class App extends React.Component {
   getData = async () => {
     let res = await fetch("http://localhost:3000/data");
     let getData = await res.json();
-    console.log("getData", getData);
     this.setState({
       List: getData,
     });
@@ -31,7 +31,7 @@ class App extends React.Component {
       }),
       headers: { "content-type": "application/json" },
     });
-    let postData = await resp.json();
+    await resp.json();
     this.getData();
     this.reset();
   };
@@ -79,6 +79,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <center>
+          <h1>Class component</h1>
+        </center>
         <h1>Employee details</h1>
         <table>
           <tr>
@@ -140,6 +143,10 @@ class App extends React.Component {
         >
           Update
         </button>
+        <center>
+          <h1>Functional component</h1>
+        </center>
+        <CrudFun />
       </div>
     );
   }
