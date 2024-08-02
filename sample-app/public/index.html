@@ -3,7 +3,58 @@
   <head>
     <title>React App</title>
   </head>
+      
+
   <body>
-    <div id="root"></div>
+    <div id="root">
+      
+      <!-- <script>
+        async function getData(){
+          let res = await fetch("http://localhost:3000/data")
+          let data = await res.json()
+          console.log(data)
+        }
+        async function deleteData(){
+         await fetch("http://localhost:3000/data/3",{method:"DELETE"})
+        
+        }
+        async function postData(){
+          let res = await fetch("http://localhost:3000/data",
+                    {
+                      method:"POST",
+                      body:JSON.stringify(
+                        {
+                        "name": "George",
+                        "company":"Wipro",
+                        }
+                    ),
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                    }
+          )
+          let data = await res.json()
+          console.log(data)
+        }
+        async function putData(){
+          let res = await fetch("http://localhost:3000/data/1",
+                    {
+                      method:"PUT",
+                      body:JSON.stringify(
+                        {
+                        "name": "Nagendra",
+                        "company":"Wipro",
+                        }
+                    ),
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                    }
+          )
+          let data = await res.json()
+          console.log(data)
+        }
+      </script> -->
+    </div>
   </body>
 </html>
